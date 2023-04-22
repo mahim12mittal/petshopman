@@ -6,7 +6,16 @@
         </div>
     </div>
 </div>
+<script>
+  fetch(window.Shopify.routes.root + "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
+  .then(response => response.json())
+  .then(({ products }) => {
+    console.log(products)
+    console.log("hello world")
+  }
+);
 
+</script>
 {% schema %}
     {
         "name":"relatedddd products",
