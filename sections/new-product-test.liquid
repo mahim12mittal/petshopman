@@ -7,7 +7,7 @@
     </div>
 </div>
 <script>
-  fetch(window.Shopify.routes.root + "recommendations/products.json?product_id=1234567890123&limit=4&intent=related")
+  fetch(window.Shopify.routes.root + "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
   .then(response => response.json())
   .then(({ products }) => {
     if (products.length > 0) {
