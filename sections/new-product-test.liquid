@@ -10,13 +10,7 @@
   fetch(window.Shopify.routes.root + "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
   .then(response => response.json())
   .then(({ products }) => {
-    if (products.length > 0) {
-      const firstRecommendedProduct = products[0];
-
-      alert(
-        `The title of the first recommended product is: ${firstRecommendedProduct.title}`
-      );
-    }
+    console.log(products)
   }
 );
 
